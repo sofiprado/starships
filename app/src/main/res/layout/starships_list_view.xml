@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/StarshipsListLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2F3031"
+    android:backgroundTint="#2F3031"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/titulo"
+        android:textSize="@dimen/tituloNave" />
+
+    <TextView
+        android:id="@+id/textViewModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/detalle_azul"
+        android:textSize="@dimen/subtituloNave" />
+
+</LinearLayout>
