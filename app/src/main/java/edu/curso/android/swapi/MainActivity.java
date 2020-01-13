@@ -78,15 +78,22 @@ public class MainActivity extends AppCompatActivity implements SwapiRecyclerAdap
 
     @Override
     public void onStarshipClick(int position) {
+
         Intent intent = new Intent(this, StarshipDetail.class);
+        Starship starshipDetalle = starshipList.get(position);
+        intent.putExtra("starshipDetail", starshipDetalle );
+        startActivity(intent);
+
+       /* Intent intent = new Intent(this, StarshipDetail.class);
         intent.putExtra("name", starshipList.get(position).getName());
         intent.putExtra("model", starshipList.get(position).getModel());
         intent.putExtra("crew", starshipList.get(position).getCrew());
         intent.putExtra("manufacturer", starshipList.get(position).getManufacturer());
         intent.putExtra("cost_in_credits", starshipList.get(position).getCost());
         intent.putExtra("length", starshipList.get(position).getLength());
+        startActivity(intent);*/
 
-        startActivity(intent);
+
     }
 }
 

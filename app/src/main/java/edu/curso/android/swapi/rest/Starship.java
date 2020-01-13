@@ -1,8 +1,11 @@
 package edu.curso.android.swapi.rest;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
-public class Starship {
+public class Starship implements Parcelable {
 
 
         @SerializedName("name")
@@ -29,6 +32,16 @@ public class Starship {
         this.length = length;
     }
 
+    protected Starship(Parcel in) {
+        name =in.readString();
+        model = in.readString();
+        crew = in.readString();
+        manufacturer = in.readString();
+        cost = in.readString();
+        length = in.readString();
+
+    }
+
         public String getName() {
             return name;
         }
@@ -41,5 +54,33 @@ public class Starship {
         public String getManufacturer() { return manufacturer; }
         public String getCost() { return cost; }
         public String getLength() { return length; }
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(model);
+        dest.writeString(crew);
+        dest.writeString(manufacturer);
+        dest.writeString(cost);
+        dest.writeString(length);
+
+    }
+
+    public static final Creator<Starship> CREATOR = new Creator<Starship>() {
+        @Override
+        public Starship createFromParcel(Parcel in) {
+            return new Starship(in);
+        }
+
+        @Override
+        public Starship[] newArray(int size) {
+            return new Starship[size];
+        }
+    };
+}
 
