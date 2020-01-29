@@ -28,7 +28,6 @@ public class SwapiRecyclerAdapter extends  RecyclerView.Adapter<SwapiRecyclerAda
     @Override
     public SwapiRecyclerAdapter.SwapiViewHolder onCreateViewHolder(ViewGroup parent, int Viewtype) {
         View view = LayoutInflater.from(context).inflate(R.layout.starships_list_view, parent,false);
-       // View detailView = LayoutInflater.from(context).inflate(R.layout.activity_starship_detail, parent,false)
         return new SwapiViewHolder(view, mStarshipClickListener);
     }
 
@@ -36,10 +35,6 @@ public class SwapiRecyclerAdapter extends  RecyclerView.Adapter<SwapiRecyclerAda
     public void onBindViewHolder(SwapiRecyclerAdapter.SwapiViewHolder holder, int position) {
         holder.textViewName.setText( starshipList.get(position).getName().toUpperCase());
         holder.textViewModel.setText("Modelo: " + starshipList.get(position).getModel());
-
-
-
-       // holder.textViewCrew.setText(starshipList.get(position).getCrew());
     }
 
     @Override

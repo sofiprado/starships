@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import edu.curso.android.swapi.rest.Starship;
 
-public class StarshipDetail extends AppCompatActivity {
+public class StarshipDetailActivity extends AppCompatActivity {
 
     TextView textViewNameDetail;
     TextView textViewModelDetail;

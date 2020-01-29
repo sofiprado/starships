@@ -5,6 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="background">#212121</color>
     <color name="titulo">#FFFFFF</color>
+    <color name="titulo_detalle">#FFFFFF</color>
     <color name="detalle_azul">#747DD6</color>
-
 </resources>

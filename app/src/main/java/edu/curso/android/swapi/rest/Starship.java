@@ -68,7 +68,6 @@ public class Starship implements Parcelable {
         dest.writeString(manufacturer);
         dest.writeString(cost);
         dest.writeString(length);
-
     }
 
     public static final Creator<Starship> CREATOR = new Creator<Starship>() {

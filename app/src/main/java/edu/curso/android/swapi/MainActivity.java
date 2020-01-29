@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements SwapiRecyclerAdap
     @Override
     public void onStarshipClick(int position) {
 
-        Intent intent = new Intent(this, StarshipDetail.class);
+        Intent intent = new Intent(this, StarshipDetailActivity.class);
         Starship starshipDetalle = starshipList.get(position);
         intent.putExtra("starshipDetail", starshipDetalle );
         startActivity(intent);
